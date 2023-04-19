@@ -6,7 +6,9 @@ import "./App.css";
 import 'animate.css';
 
 // 19697a7a
-const API_URL = "http://www.omdbapi.com?apikey=19697a7a";
+console.log(process.env.REACT_APP_API_KEY);
+const API_URL = `http://www.omdbapi.com/?i=tt3896198&apikey=${process.env.REACT_APP_API_KEY}`;
+
 
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
